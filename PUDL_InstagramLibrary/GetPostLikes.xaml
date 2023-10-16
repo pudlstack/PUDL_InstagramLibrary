@@ -1,0 +1,208 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" this:Main.instagramPostURL_In="https://www.instagram.com/p/CycCXguJ7na/" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="instagramPostLikes_out" Type="OutArgument(sd:DataTable)" />
+    <x:Property Name="instagramPostURL_In" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap2010:Annotation.AnnotationText>UPTF00000230eyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8SW5pdGlhbFRvb2x0aXA+a19fQmFja2luZ0ZpZWxkIjoiSW5wdXQ6IEluc3RhZ3JhbSBQT1NUIFVSTFxuT3V0cHV0OiBEYXRhIFRhYmxlIHdpdGggbGlzdCBvZiBmb2xsb3dlcnNcblxuQXNzdW1wdGlvbjogVGhpcyBmdW5jdGlvbiB1c2VzIENocm9tZSBicm93c2VyXG5cbkZ1bmN0aW9uIERldmVsb3BlZCB3aXRoIHRoZSBoZWxwIG9mIEFuZGVycyBKZW5zZW4ncyBWaWRlbyAtIFwiVGFibGUgRXh0cmFjdGlvbiBXaXRoIEluZmluaXRlIFNjcm9sbGluZyBJbiBVaVBhdGggLSBGdWxsIFR1dG9yaWFsXCIgLSBodHRwczpcL1wvd3d3LnlvdXR1YmUuY29tXC9saXZlXC8wNDZWUURFZUFSTT9zaT1RODd3M1dDeGxqc2NySkRnXG4iLCI8VmVyc2lvbj5rX19CYWNraW5nRmllbGQiOjF9</sap2010:Annotation.AnnotationText>
+  <sap:VirtualizedContainerService.HintSize>916.8,2432.8</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="Input: Instagram POST URL&#xA;Output: Data Table with list of followers&#xA;&#xA;Assumption: This function uses Chrome browser&#xA;&#xA;Function Developed with the help of Anders Jensen's Video - &quot;Table Extraction With Infinite Scrolling In UiPath - Full Tutorial&quot; - https://www.youtube.com/live/046VQDEeARM?si=Q87w3WCxljscrJDg&#xA;" DisplayName="PUDL_InstagramLibrary_GetPostLikes" sap:VirtualizedContainerService.HintSize="668.8,2368" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Instagram Post" sap:VirtualizedContainerService.HintSize="606.4,2116" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" IsCVEnabled="False" ScopeGuid="8414f957-f1e1-47f7-ac8a-6e9c84176b1b" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do - Navigate to followers pop up and grab all followers" sap:VirtualizedContainerService.HintSize="572.8,1899.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="postlikessString" />
+              <Variable x:TypeArguments="x:Int32" Name="lastCount">
+                <Variable.Default>
+                  <Literal x:TypeArguments="x:Int32" />
+                </Variable.Default>
+              </Variable>
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ActivateBefore="True" sap2010:Annotation.AnnotationText="Click Likes Count&#xA;&#xA;&#xA;" ClickType="Single" DisplayName="Click Likes Count" sap:VirtualizedContainerService.HintSize="510.4,233.6" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8414f957-f1e1-47f7-ac8a-6e9c84176b1b" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.instagram.com/p/CycCXguJ7na/" DesignTimeRectangle="1365, 551, 59, 23" DesignTimeScaleFactor="1.25" FriendlyName="'92 likes'" FullSelectorArgument="&lt;webctrl aaname=' likes' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname=' likes' tag='SPAN' type='' /&gt;" Guid="4bb9694a-76c9-47e1-a799-ada8501ee1fe" ImageBase64="" InformativeScreenshot="002319d4ee853d977cee54980998cd96.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='20 yrs later, hope she’d be proud ?? #24 | Instagram' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NClick>
+            <ui:BuildDataTable sap2010:Annotation.AnnotationText="built initial post likes dt 0 rows&#xD;&#xA;" DataTable="[instagramPostLikes_out]" DisplayName="Build Data Table - build initial 0 row post likes dt" sap:VirtualizedContainerService.HintSize="510.4,104" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;&lt;/NewDataSet&gt;">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:BuildDataTable>
+            <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Continue looping while followers count keeps getting larger&#xA;" DisplayName="Do While - Like Participant Count Keeps Getting Larger" sap:VirtualizedContainerService.HintSize="510.4,1182.4" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
+              <ui:InterruptibleDoWhile.Body>
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="476.8,1001.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:Int32">[lastCount]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:Int32">[instagramPostLikes_out.RowCount]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <Delay DisplayName="Delay - Wait For Follower Content To Appear" Duration="00:00:05" sap:VirtualizedContainerService.HintSize="433.6,90.4" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                  <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[instagramPostLikes_out]" DisplayName="Extract Table Data - InstagramPostLikes" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='handle' ReferenceName='Column0'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xD;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='name' ReferenceName='Column1'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xD;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='following' ReferenceName='Column2'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xD;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column0' attr='fulltext'&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column1' attr='fulltext'&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column2' attr='fulltext'&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='button' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="433.6,157.6" sap2010:WorkflowViewState.IdRef="NExtractData_4" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="8414f957-f1e1-47f7-ac8a-6e9c84176b1b" Version="V3">
+                    <uix:NExtractData.Target>
+                      <uix:TargetAnchorable DesignTimeRectangle="710, 317, 500, 500" DesignTimeScaleFactor="1.25" FriendlyName="'LikesCloseichimondRichm…'" FullSelectorArgument="&lt;webctrl aria-role='dialog' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' tag='DIV' /&gt;" Guid="69111445-baac-41bd-a69b-8e1b205ffd34" InformativeScreenshot="7d1edc5c95e6c9badf50cdec49b43687.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='20 yrs later, hope she’d be proud ?? #24 | Instagram' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                    </uix:NExtractData.Target>
+                  </uix:NExtractData>
+                  <ui:OutputDataTable DataTable="[instagramPostLikes_out]" DisplayName="Output Data Table - post likes dt" sap:VirtualizedContainerService.HintSize="433.6,80.8" sap2010:WorkflowViewState.IdRef="OutputDataTable_2" Text="[postlikessString]" />
+                  <uix:NMouseScroll KeyModifiers="{x:Null}" Direction="Down" DisplayName="Mouse Scroll - Scroll Last Extraction Number of Rows" sap:VirtualizedContainerService.HintSize="433.6,157.6" sap2010:WorkflowViewState.IdRef="NMouseScroll_1" InteractionMode="HardwareEvents" MovementUnits="10" ScopeIdentifier="8414f957-f1e1-47f7-ac8a-6e9c84176b1b" Version="V3">
+                    <uix:NMouseScroll.Target>
+                      <uix:TargetAnchorable BrowserURL="https://www.instagram.com/p/CycCXguJ7na/" DesignTimeRectangle="710, 371, 500, 445" DesignTimeScaleFactor="1.25" FriendlyName="'ichimondRichmond Camero…'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='4' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='' tag='DIV' aaname='' /&gt;" Guid="7b0eeb0e-a9f4-475a-be8b-09032b06d80d" InformativeScreenshot="ae9b75d5ee6e57e1d92ff2e3d389192d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='20 yrs later, hope she’d be proud ?? #24 | Instagram' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                            <uix:Target DesignTimeRectangle="770, 317, 380, 54" ElementType="Text" FriendlyName="'Likes'" FullSelectorArgument="&lt;webctrl tag='H1' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='H1' type='' aaname='Likes' check:innerText='Likes' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAYAAAAA6CAYAAAC54Y4YAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAArtSURBVHhe7ZxLaCTVHsYzdybprn53daeTTj/TST/S6e6kO8/JzHiHK6jgYmCuznAXbhVduhG3iiBuXLh1IyiCuHSl4AtBEHEhIoL4WigiIi5EBB/f/f6nu3ITDffOIov0re8HH6fqnFOnTp3qfF+nupMZP5dHbj6HtJ9GIptCPJOCl066MpnNIL9QQLVeRb1WRqW0iDL3u6ur2B5sYKVcQbmwgEa5ivXVFvrtDgbdLkaDPnaGAwzWWhh02LfXdnWbPGZzMMBGv0/1MOivo9ftoNtpOg0HPYw2B1jrtNFYWcFCsYRMfgH5xTIKS1Uk0ikkMmlkCpzvfB6xbBpxzjGRodLcTnLeiQQSiSQSSfZNpRFNpJDKF7DS66NYq7NPChG2R1JZeH4Bsfwikhw/X2tgqdlGvdVCudFAlddY4RwWq3Unf3GJ65JFLJWBl0xPlEKUitn5cz4SeZ9zsvYEzzuWbZsiiTjmYh4i8RhirHdzpWzbs76xmFPEYx/rR0Un8lgfi8fdtVlp+67N+npRRKJRt+3Z2Efag7ZD2f6f64L6STkXjXCbsrFsvXk9VnoprpldA+tNEc4lwvX1eO12/TGuf4x9ogm7Bhsr4uYRT/E1xbYI12CWx0d4zVHW2dpEOFcb08nGNAVrELX5e5jlWOdZXuA9m0tnEM34vA8+5rwYzp2/gHN/+5vT+QvnMReJuPmXq1UUyyXkC/NjzY+V42sml8/Dp8ZlDlneN59tptxE1tfP5VyfHPv4PM76ub6T4/6svMmNz30/iyzls7/Vz7M+z9dGjkrwWmOxKJIJzykei7CMst5z9R7XLcZr9ngd0eick9V5HrcpK90x7JuOe8gmY/CTHvLpOPKZOPyU5zSfiWHRT6CUT6K6kEanXsRytYQb16/hXzf/id3NHq7sDrFSzKNdWUBvuYR2idtULZ9CMctjc2mU57P8Gafm06hSNWq5kMbKQgrNpTRa1Fo5i245R+XRrYy1Rq3XCujVF9A3LS+6slctoE8NagvYrC9ic7noylFjCVsrJWytlrHVLGG7VcZ2u4KdThW7azWnvW4dF9eXcbG3gov9VRxQrhw0j2n/qHqr2F9fwX6XWmtgr7OM3XaNY1ex3RmXW60KRk2el6Xbp2x/c2XJzXm9Ou+up7+8gA3WDTm3Ucv68fhOHdtry9juUusN7PB8O5zTLrXf5/n7LVzc6ODyqIdLowGu7AypES5vbeK2YR+XB13Or8Xr5LEca+TmUuJ5uF5cp04ph9WFDKo53o+Mx3uTxMpihuueRcfWm+vYZb8e13Cd27bmNt9efVLaPZiozzp3L6gB78dGo4gZn+ZoL9Z0JokUTT+eitNMk0haAPAHP20h4H6Q+APAkCguFlCvVNBttlCi+Rdz86gVl9CoVtCoVdBeXUG3TTOnuW9v9PlCG2CP5fbmBna3tnBxdxcHe3vY3d7C9mjoDN80ZGBsbQ+xvT3C+noXqzTfUqmMjJ9HysTzJGx+Jhq/GW3UDMr3uU9jpjnM0lBmaSKemVEmS7NJI0vjbvY3sHX5NnhZn3U0GxpXPMfrLtWw0Gih3ttAa2sbbc5vuc39VnNcNpuYX1qiCdJ0LEzM9FnGaGCxSelMnsaXsDlxPlEzMzNgzsMUmwSA1du+x9IZtZn5ZNsM0xm9mTcVGP+haIBjmdHTHFzdeNuM1hm2GQZNYdx/HAhHjT0og3ozykCu3WlyjPVzc2dAmfFze86OcfJckJlm7VxstxDwuP5W2v7Y0M28j2p8rK2FBbmtixuD9eO2iWxOc3OHusD989QFO6+tGc9jgTIbiTrjnzl3DueocQDMublXazWUKuWxMR8GAE3YKdj/j3Ls44zfvc4L4zoafVA6k+ebpCwNPMvtQFZn4fCXAKDxm9lbGWzn8lmnJA07RgNP0PQtABLxSQDEo67eBQDLQ/PntQdh4HmzbBsHQMJCgMekOYbPn9mCn2IAxJBLWxh4KHC76CexRDOvL+X5RqyBreE6/nH1AFcv72LUa+HveyNU2T5YKdO0F9Auz6NT5Ru6hSxKPLbMtmqB5kNVaPwV26eWCymaEAOgmGJgpGn8PtbN8E00HVO3Mi7HxmOmMw4AM7VAGy4AFjGkEVkAuJIGG5jxFgPAQiAw//2emX+DJQPgSAgcDI7rYiAzYfbbozHvdakgAGi0OxYAJjuPnc+dc1w6818tcV2KzvQtxLq8jgHntmntNP8RzX/LGf8KxTe56zR+runeoIVdBs8uzX/PqcUgauNgY41BsMYQsCDo42BzHZd5Pw4Ga5xfEztrHKdd5xwYLM0KhgxDWzNbx+ZiFvX5FAMgikouzrVn8JZ83i+Grpm7hSvXLgiBnhPXuMb1rzK4eB/6bj8IgkkgM3xnIIQQIpQoAIQQIqQoAIQQIqQoAIQQIqQoAIQQIqQoAIQQIqQoAIQQIqQoAIQQIqQoAIQQIqQoAIQQIqQoAIQQIqQoAIQQIqQoAIQQIqQoAIQQIqQoAIQQIqQoAIQQIqQoAIQQIqQoAIQQIqQoAIQQIqQoAIQQIqQoAMT/Fd999x2effZZfPjhh5Ma4JNPPsHGxoaTbQshxigAxFTw/fff484778TMzAzeeeedSe1feeyxx1yfu+++Gz/88IOrUwAIcTIKADEV3GoAvPTSSygWi3jqqafw66+/ujoFgBAnowAQU8GtBsBJKACEOBkFgJgKFABCnD4KADEV3GoAPP/8867PAw88gJ9//tnVnRQA9njoySefdH339vbw8ccfu3rD+tx///2o1Wqu/fbbb8drr72G33//fdID+OWXX/Dyyy/jrrvuQjKZdLLtt99+e9JDiLOPAkBMBacdAG+++aYz+D+bf1Dv+z7uu+8+PPjgg27fDP6FF17AH3/8cSw8rM36PPTQQ2i32+78QkwLCgAxFZxmAJjhm/GbeZvhB3zxxRe4dOmS6/fee+9NauH6W50d8/nnn+PLL7/EwcEBms0mPvjgg0kv4KeffsJnn3022RPi7KMAEFPBaQXAG2+8gWvXrh17Rx8QHPv4448fq7dxbDxre/XVV/H111/j6tWrbgz7mwN7HCTENKIAEFPBaQSAfT10OBwemnzwNdGA4G8I/ptsfAuHF1980T0msjr7TeKJJ57AN998MxlJiOlAASCmgtMIAHtkc/36ddduvwV8++23rj0gCICbN2+6Z/wn6d133530Br766it3jAVAEARHHykJcdZRAIip4LQeAb3//vvuA1vrY6U9tw947rnnXP2jjz6K3377bVL7v7FHQE8//bQ79p577sGPP/44aRHibKMAEFPBaX4IbO/87TcA62fv6oNHQR999BHW1tbcO/lXXnnl2Nc+g/8xZGPatn0wfPRzgrfeesuNd/RfUAhx1lEAiKngaACcpMDwbyUAjOCbQPZBbvBvI8zQzeStzsawzwvuuOMOXLlyxdUFYwbj7e/v4+GHH8aNGzdcaFifZ5555lgwCHGWUQCIqeC0A8AIvvNvxh18I8je9b/++uu49957Dz/ktSCwD43tmb9hc3nkkUcOP1C2ftbfjjv6W4MQZx0FgBBChBQFgBBChBQFgBBChBQFgBBChBQFgBBChBQFgBBChBQFgBBChBQFgBBChBQFgBBChBQFgBBChBQFgBBChBQFgBBChBQFgBBChBQFgBBChBQFgBBChBQFgBBChBQFgBBChBQFgBBChJSZTz/9FJIkSVL4pN8AhBAipCgAhBAilAD/Bu0cr0HpQqbzAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NMouseScroll.Target>
+                  </uix:NMouseScroll>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,144" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Inside Loop - post likes Last Count: &quot; + lastCount.ToString + &quot;New post likes Count &quot; + instagramPostLikes_out.RowCount.ToString +vbCrLf]" />
+                </Sequence>
+              </ui:InterruptibleDoWhile.Body>
+              <ui:InterruptibleDoWhile.Condition>
+                <VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="instagramPostLikes_out.RowCount &gt; lastCount" />
+              </ui:InterruptibleDoWhile.Condition>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:InterruptibleDoWhile>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="510.4,144" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[&quot;followers Last Count: &quot; + lastCount.ToString + &quot;New post likes Count &quot; + instagramPostLikes_out.RowCount.ToString +vbCrLf + postlikessString]" />
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-1928, -297, 1936, 1056" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="551111ba72c680ac447926ebcb9e8060.jpg" Selector="&lt;html app='chrome.exe' title='Andrea Garcia Jordan (@dropkickjordan) • Instagram photos and videos' /&gt;" Title="alyssa garcia (@alyssaggarcia) • Instagram photos and videos" Url="[instagramPostURL_In]" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

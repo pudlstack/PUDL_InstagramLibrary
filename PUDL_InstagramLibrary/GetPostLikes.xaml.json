@@ -1,0 +1,33 @@
+{
+  "DisplayName": "GetPostLikes",
+  "Tooltip": "Input: Instagram POST URL\nOutput: Data Table with list of followers\n\nAssumption: This function uses Chrome browser\n\nFunction Developed with the help of Anders Jensen's Video - \"Table Extraction With Infinite Scrolling In UiPath - Full Tutorial\" - https://www.youtube.com/live/046VQDEeARM?si=Q87w3WCxljscrJDg\n",
+  "HelpLink": null,
+  "Color": null,
+  "OriginalIconFileName": null,
+  "Arguments": [
+    {
+      "Name": "instagramPostURL_In",
+      "DisplayName": "instagramPostURL_In",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "instagramPostLikes_out",
+      "DisplayName": "instagramPostLikes_out",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    }
+  ]
+}
